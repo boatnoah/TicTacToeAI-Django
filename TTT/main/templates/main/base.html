@@ -1,58 +1,45 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="{}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <head>
-        <body>
-            <h1 id="title">Tic-Tac-Toe</h1>
-        </body>
-        <body>
-              <div id="game-screen" class="center hidden">
-                <!-- Every cell has an id "cell" followed by cell row and cell column -->
-                <table class="center">
-                  <tr>
-                    <td>
-                      <button type="button" class="cell" id="cell00"></button>
-                    </td>
-                    <td>
-                      <button type="button" class="cell" id="cell01"></button>
-                    </td>
-                    <td>
-                      <button type="button" class="cell" id="cell02"></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button type="button" class="cell" id="cell10"></button>
-                    </td>
-                    <td>
-                      <button type="button" class="cell" id="cell11"></button>
-                    </td>
-                    <td>
-                      <button type="button" class="cell" id="cell12"></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button type="button" class="cell" id="cell20"></button>
-                    </td>
-                    <td>
-                      <button type="button" class="cell" id="cell21"></button>
-                    </td>
-                    <td>
-                      <button type="button" class="cell" id="cell22"></button>
-                    </td>
-                  </tr>
-                </table>
-                <button type="button" id="restart">Restart</button>
-              <div>
-            </div>
-        </body>
-    </head>
+    
 </head>
-
-
-</html>
+    <body>
+      <h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">Tic-Tac-Toe</h1>
+      
+      <!-- The game board -->
+      <div id="game-board" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+        <form method="POST" action="{% url 'process_move' %}">
+          {% csrf_token %}
+          <table>
+              <tr>
+                  <td><button class="cell" id="cell-0" name="cell_value" value="0" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_0 }} </button></td>
+                  <td><button class="cell" id="cell-1" name="cell_value" value="1" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_1 }} </button></td>
+                  <td><button class="cell" id="cell-2" name="cell_value" value="2" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_2 }} </button></td>
+              </tr>
+              <tr>
+                  <td><button class="cell" id="cell-3" name="cell_value" value="3" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_3 }} </button></td>
+                  <td><button class="cell" id="cell-4" name="cell_value" value="4" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_4 }} </button></td>
+                  <td><button class="cell" id="cell-5" name="cell_value" value="5" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_5 }} </button></td>
+              </tr>
+              <tr>
+                  <td><button class="cell" id="cell-6" name="cell_value" value="6" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_6 }} </button></td>
+                  <td><button class="cell" id="cell-7" name="cell_value" value="7" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_7 }} </button></td>
+                  <td><button class="cell" id="cell-8" name="cell_value" value="8" style="background-color: whitesmoke; height: 100px; width: 100px;"> {{ game_data.cell_8 }} </button></td>
+              </tr>
+             
+          </table>
+          
+      </div>
+  
+      <!-- Display game status -->
+      <div id="game-status" style="text-align: center;">
+        <button id="restart-button" style="background-color: whitesmoke; height: 50px; width: 100px;">Restart</button>
+          <p id="winner">{{ game.winner }}</p>
+          
+      </div>
+  
+  </body>
+  </html>
+    

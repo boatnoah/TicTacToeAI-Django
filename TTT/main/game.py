@@ -1,5 +1,5 @@
-from AI import AI
-
+# Description: This file contains the game logic for the Tic Tac Toe game.
+from .AI import AI
 class TicTacToe:
     def __init__(self, ai_instance):
         self.board = [   0, 1, 2, 
@@ -10,6 +10,7 @@ class TicTacToe:
         self.human = "O"
         self.AI = "X"
         self.ai_instance = ai_instance
+        self.winner = None
         
 
         
@@ -46,20 +47,29 @@ class TicTacToe:
         return winner 
 
 
-    def play(self):
+    def play(self, human_move):
         p1 = self.ai_instance
     
         if self.turn % 2 == 0:
             p1_move = p1.best_AI_move(self.board)
             self.board[p1_move] = "X"
             result = self.check_winner(self.board)  
+            self.winner = result
             self.turns()
              
 
         else:
-            p2 = int(input("Enter a number from 0-8: "))
+            p2 = int(human_move)
             self.board[p2] = "O"
             result = self.check_winner(self.board)
+            self.winner = result
             self.turns()
 
         return result
+
+    def get_board(self): #returns the board in a dictionary format
+        board_dict = {}
+        for i in range(len(self.board)):
+            board_dict[f"cell_{i}"] = self.board[i]
+
+        return board_dict
