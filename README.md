@@ -76,14 +76,4 @@ Follow these steps to set up and run the Tic-Tac-Toe game locally:
 - HTML
 - CSS
 
-## Contributing
 
-Contributions are welcome! If you want to contribute to this project, please open an issue or create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Special thanks to [Django](https://www.djangoproject.com/) for making web development in Python so convenient.
