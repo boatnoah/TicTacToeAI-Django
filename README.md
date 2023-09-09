@@ -65,9 +65,6 @@ Follow these steps to set up and run the Tic-Tac-Toe game locally:
 - The AI will make its moves immediately after you.
 - Restart the game at any time by clicking the "Restart" button.
 
-## Screenshots
-
-![Tic-Tac-Toe Screenshot](/path/to/screenshot.png)
 
 ## Technologies Used
 
