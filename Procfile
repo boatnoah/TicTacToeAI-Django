@@ -1,1 +1,1 @@
-web: gunicorn TTT.wsgi:application --log-file -
+web: gunicorn TTTdj.wsgi:application --log-file -
