@@ -1,1 +1,1 @@
-web: gunicorn TTT.wsgi
+web: gunicorn TTT/TTT.wsgi
