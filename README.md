@@ -15,49 +15,54 @@ Follow these steps to set up and run the Tic-Tac-Toe game locally:
 
 1. Clone the repository:
 
-    ```shell
-    git clone https://github.com/yourusername/tic-tac-toe.git
-    ```
+   ```shell
+   git clone https://github.com/yourusername/tic-tac-toe.git
+   ```
 
 2. Change into the project directory:
 
-    ```shell
-    cd tic-tac-toe
-    ```
+   ```shell
+   cd tic-tac-toe
+   ```
 
 3. Create a virtual environment (optional but recommended):
 
-    ```shell
-    python -m venv venv
-    ```
+   ```shell
+   python -m venv venv
+   ```
 
 4. Activate the virtual environment:
 
-    On macOS and Linux:
+   On macOS and Linux:
 
-    ```shell
-    source venv/bin/activate
-    ```
+   ```shell
+   source venv/bin/activate
+   ```
 
-    On Windows (PowerShell):
+   On Windows (PowerShell):
 
-    ```shell
-    .\venv\Scripts\Activate
-    ```
+   ```shell
+   .\venv\Scripts\Activate
+   ```
 
 5. Install the project dependencies:
 
-    ```shell
-    pip install -r requirements.txt
-    ```
+   ```shell
+   pip install -r requirements.txt
+   ```
 
 6. Run the development server:
 
-    ```shell
-    python manage.py runserver
-    ```
+   ```shell
+   python manage.py runserver
+   ```
 
 7. Access the game in your web browser by navigating to `http://127.0.0.1:8000/` or the URL provided in your terminal.
+
+OR
+
+Play on the web with this link:
+`https://tttdj-2647b802e3ed.herokuapp.com/`
 
 ## Usage
 
@@ -65,12 +70,9 @@ Follow these steps to set up and run the Tic-Tac-Toe game locally:
 - The AI will make its moves immediately after you.
 - Restart the game at any time by clicking the "Restart" button.
 
-
 ## Technologies Used
 
 - Python
 - Django
 - HTML
 - CSS
-
-
