@@ -7,7 +7,6 @@ Welcome to the Tic-Tac-Toe game! This simple web-based game allows you to play a
 - Play against an AI opponent.
 - Restart the game at any time.
 - View the game status (winner or draw).
-- No need for JavaScript; it's a Django-based web application.
 
 ## Installation
 
