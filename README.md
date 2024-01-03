@@ -58,10 +58,8 @@ Follow these steps to set up and run the Tic-Tac-Toe game locally:
 
 7. Access the game in your web browser by navigating to `http://127.0.0.1:8000/` or the URL provided in your terminal.
 
-OR
 
-Play on the web with this link:
-`https://tttdj-2647b802e3ed.herokuapp.com/`
+
 
 ## Usage
 
